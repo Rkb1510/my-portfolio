@@ -5,17 +5,15 @@ import React from 'react';
 function Project() {
   const projectList = [
     {
-      title: 'Portfolio Website',
-      description: 'A personal website built with React to showcase my projects and skills.',
-    },
-    {
-      title: 'Seasonal Order Management App',
-      description: 'A .NET-based system to track customer orders, shipments, and revenue.',
-    },
-    {
       title: 'Banking Dashboard',
       description: 'A secure full-stack banking app using .NET, React, and JWT authentication.',
     },
+
+    {
+      title: 'Portfolio Website',
+      description: 'A personal website built with React to showcase my projects and skills.',
+    },
+    
   ];
 
   return (
