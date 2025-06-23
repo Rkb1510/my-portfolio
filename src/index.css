@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
+.is-current a {
+  color: #58ff58;
+  border-bottom: 2px solid #58ff58;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -28,10 +32,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  min-width: 100vw;
   min-height: 100vh;
+  background-color: #0d1117;
 }
 
 h1 {

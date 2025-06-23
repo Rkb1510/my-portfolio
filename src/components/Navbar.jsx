@@ -29,12 +29,10 @@ const styles = {
     logo: {
         fontSize: '1.5rem',
     },
-    logo: {
-        fontSize: '1.5rem'
-    },
+
     navLinks: {
         listStyle: 'none',
-        display: 'felx',
+        display: 'flex',
         gap: '1.5rem'
     },
 };

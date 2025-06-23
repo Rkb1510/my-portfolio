@@ -10,10 +10,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <section id="home" style={{ padding: '2rem' }}>
-        {/*<h2>Welcome to my professional website</h2>
-        <p>This is the homepage section.</p>*/}
-      </section>
       <Hero />
       <About />
       <Project />
