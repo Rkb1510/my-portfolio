@@ -1,13 +1,14 @@
 //components/Contact.jsx
 
 import React, { useState } from "react";
+import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-function Contact()
-{
+function Contact() {
     const [formData, setFormData] = useState({
-        name:'',
-        email:'',
-        message:'',
+        name: '',
+        email: '',
+        message: '',
     });
 
     const handleChange = (e) => {
@@ -17,16 +18,20 @@ function Contact()
         }));
     };
 
-    const handleSubmit =(e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form Data:' ,formData);
+        console.log('Form Data:', formData);
         alert('Message sent (simulated)');
-        setFormData({name: '', email:'', message:''});
+        setFormData({ name: '', email: '', message: '' });
     };
 
     return (
-        <section 
+        <motion.section
             id="contact"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true }}
             style={{
                 padding: '4rem 2rem',
                 background: '#0d1117',
@@ -34,15 +39,24 @@ function Contact()
                 textAlign: 'center',
             }}
         >
-            <h2 style={{fontSize:'2.5rem', marginBottom: '1rem'}}>Contact Me</h2>
-            <p style={{fontSize: '1.2rem', marginBottom: '2rem'}}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Contact Me</h2>
+            <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
                 I’d love to hear from you — whether it’s a project idea, a job opportunity, or just to connect!
             </p>
 
-            <p style={{marginTop: '1rem', fontSize:'1.1rem', color:'#58a6ff'}}>
-                Call Me: <strong>+1 (780) 952-9357</strong>
-            </p>
-            
+            <div style={styles.contactItem}>
+                <FaPhone style={styles.icon} />
+                <span>+1 (780) 952-9357</span>
+            </div>
+            <div style={styles.contactItem}>
+                <FaEnvelope style={styles.icon} />
+                <span>rbhuva1996@gmail.com</span>
+            </div>
+            <div style={styles.contactItem}>
+                <FaMapMarkedAlt style={styles.icon} />
+                <span>Alberta, Canada</span>
+            </div>
+
             <a
                 href="mailto:rbhuva1996@gmail.com"
                 style={{
@@ -52,9 +66,14 @@ function Contact()
                     textDecoration: 'none',
                     borderRadius: '4px',
                     fontWeight: '600',
+                    display: 'inline-block',
+                    marginTop: '1.5rem',
                 }}
             >
-                Send an Email
+                <FaEnvelope style={{                    
+                    marginRight: '0.5rem',                                        
+                    }}/>
+                    Send an Email
             </a>
 
             <form
@@ -111,19 +130,35 @@ function Contact()
                         cursor: 'pointer',
                     }}
                 >
-                Send Message
+                    Send Message
                 </button>
             </form>
-        </section>
+        </motion.section>
     );
 }
 
-const inputStyle ={
+const inputStyle = {
     width: '100%',
     padding: '0.75rem 1rem',
     borderRadius: '4px',
     border: '1px solid #ccc',
     fontSize: '1rem',
+};
+
+const styles = {
+    contactItem: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '10px',
+        marginBottom: '1rem',
+        fontSize: '1.1rem',
+        color: '#58a6ff',
+    },
+    icon: {
+        fontSize: '1.2rem',
+        color: '#58ff58',
+    },
 };
 
 export default Contact;

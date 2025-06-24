@@ -1,17 +1,20 @@
 //components/Project.jsx
 
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 function Project() {
   const projectList = [
     {
       title: 'Banking Dashboard',
       description: 'A secure full-stack banking app using .NET, React, and JWT authentication.',
+      githubUrl: 'https://github.com/Rkb1510/Banking-App',
     },
 
     {
       title: 'Portfolio Website',
       description: 'A personal website built with React to showcase my projects and skills.',
+      githubUrl: 'https://github.com/Rkb1510/my-portfolio',
     },
     
   ];
@@ -45,10 +48,32 @@ function Project() {
               borderRadius: '8px',
               boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
               textAlign: 'left',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              height: '200px',
             }}
           >
-            <h3 style={{ color: '#58a6ff' }}>{project.title}</h3>
-            <p>{project.description}</p>
+            <div>
+              <h3 style={{ color: '#58a6ff' }}>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+            <a
+              href={project.githubUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{
+                marginTop: '1rem',
+                color: "#58a6ff",
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                fontWeight: '600'
+              }}
+            >
+              <fagithub size={20} />View Code
+            </a>
           </div>
         ))}
       </div>
