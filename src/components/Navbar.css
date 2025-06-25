@@ -16,6 +16,7 @@
 .nav-links {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 1.5rem;
   margin: 0;
   padding: 0;
@@ -31,9 +32,12 @@
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover,
-.nav-links li a.is-current {
-  color: #58a6ff;
+.nav-links li:hover a{
+    color: #58a6ff;
+}
+.nav-links li.is-current a {
+  color: #58a5ff;
+  border-bottom: 2px solid #58a6ff;
 }
 
 .nav-icon {
@@ -69,7 +73,6 @@
 
   .nav-links.open {
     transform: translateX(0);
-    display: flex;
   }
 
   .nav-links li {
