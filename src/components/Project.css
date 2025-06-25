@@ -1,0 +1,52 @@
+/*components/Project.css*/
+
+.project-section {
+    padding: 4rem 2rem;
+    background-color: #161b22;
+    color: white;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+  background-color: #0d1117;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.project-card-title {
+  color: #58a6ff;
+}
+
+.project-link {
+  margin-top: 1rem;
+  color: #58a6ff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #82cfff;
+}

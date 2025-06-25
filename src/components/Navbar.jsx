@@ -1,60 +1,37 @@
 //components/Navbar.jsx
 
-import React from "react";
+import React, {useState} from "react";
 import Scrollspy from "react-scrollspy";
-import { FaHome, FaUser, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css";
 
-function Navbar()
-{
+function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () =>setMenuOpen(!menuOpen);
+
     return (
-        <nav style={styles.navbar}>
-            <h1 style={styles.logo}>Rushi's Portfolio</h1>
-            <Scrollspy
-                items={['home','about','projects','contact']}
-                currentClassName="is-current "
-                style={styles.navLinks}
+        <nav className="navbar">
+            <h1 className="logo">Rushi's Portfolio</h1>
+
+            <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+                <Scrollspy
+                items={["home", "about", "projects", "contact"]}
+                currentClassName="is-current"
+                className="nav-links"
                 offset={-100}
             >
-                <li><a href="#home" style={styles.link}><FaHome style={styles.icon} /> Home</a></li>
-                <li><a href="#about" style={styles.link}><FaUser style={styles.icon} /> About</a></li>
-                <li><a href="#projects" style={styles.link}><FaProjectDiagram style={styles.icon} /> Projects</a></li>
-                <li><a href="#contact" style={styles.link}><FaEnvelope style={styles.icon} /> Contact</a></li>
-            </Scrollspy>            
+                <li><a href="#home" onClick={() => setMenuOpen(false)}><FaHome className="nav-icon" /> Home</a></li>
+                <li><a href="#about" onClick={() => setMenuOpen(false)}><FaUser className="nav-icon" /> About</a></li>
+                <li><a href="#projects" onClick={() => setMenuOpen(false)}><FaProjectDiagram className="nav-icon" /> Projects</a></li>
+                <li><a href="#contact" onClick={() => setMenuOpen(false)}><FaEnvelope className="nav-icon" /> Contact</a></li>        
+            </Scrollspy>
+            </div>
+
+            <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
+                {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
         </nav>
     );
 }
-
-const styles = {
-    navbar: {
-        display: 'felx',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '1rem 2rem',
-        backgroundColor: '#0d1117',
-        color: '#ffffff',
-    },
-    logo: {
-        fontSize: '1.5rem',
-    },
-
-    navLinks: {
-        listStyle: 'none',
-        display: 'flex',
-        gap: '1.5rem'
-    },
-
-    link: {
-        color: 'white',
-        textdecoration: 'none',
-        fontWeight: '500',
-        display: 'flex',
-        alignItems: 'center',
-    },
-
-    icon: {
-        marginRight: '8px',
-        verticalAlign: 'middle',
-    },
-};
 
 export default Navbar;

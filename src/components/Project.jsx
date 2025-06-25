@@ -1,6 +1,7 @@
 //components/Project.jsx
 
 import React from 'react';
+import './Project.css';
 import { FaGithub } from 'react-icons/fa';
 
 function Project() {
@@ -20,59 +21,23 @@ function Project() {
   ];
 
   return (
-    <section
-      id="projects"
-      style={{
-        padding: '4rem 2rem',
-        backgroundColor: '#161b22',
-        color: 'white',
-        textAlign: 'center',
-      }}
-    >
-      <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>My Projects</h2>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '2rem',
-          maxWidth: '1000px',
-          margin: '0 auto',
-        }}
-      >
+    <section id="projects" className="project-section">
+      <h2 className="project-title">My Projects</h2>
+      <div className="project-grid">
         {projectList.map((project, index) => (
-          <div
-            key={index}
-            style={{
-              backgroundColor: '#0d1117',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-              textAlign: 'left',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              height: '200px',
-            }}
-          >
+          <div key={index} className="project-card">
             <div>
-              <h3 style={{ color: '#58a6ff' }}>{project.title}</h3>
+              <h3 className="project-card-title">{project.title}</h3>
               <p>{project.description}</p>
             </div>
             <a
               href={project.githubUrl}
-              target='_blank'
-              rel='noopener noreferrer'
-              style={{
-                marginTop: '1rem',
-                color: "#58a6ff",
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                fontWeight: '600'
-              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
             >
-              <fagithub size={20} />View Code
+              <FaGithub size={20} />
+              View Code
             </a>
           </div>
         ))}
