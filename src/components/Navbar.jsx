@@ -17,7 +17,6 @@ function Navbar() {
                 <Scrollspy
                 items={["home", "about", "projects", "contact"]}
                 currentClassName="is-current"
-                className="nav-links"
                 offset={-100}
             >
                 <li><a href="#home" onClick={() => setMenuOpen(false)}><FaHome className="nav-icon" /> Home</a></li>

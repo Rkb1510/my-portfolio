@@ -69,6 +69,7 @@
 
   .nav-links.open {
     transform: translateX(0);
+    display: flex;
   }
 
   .nav-links li {
