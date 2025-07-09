@@ -6,6 +6,7 @@ import Project from './components/Project.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import './index.css';
+import ChatBot from './components/ChatBot.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Project />
       <Contact />
       <Footer />
+      <ChatBot />
     </>
   );
 }
