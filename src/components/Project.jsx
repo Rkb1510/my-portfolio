@@ -17,6 +17,12 @@ function Project() {
       description: 'A personal website built with React to showcase my projects and skills.',
       githubUrl: 'https://github.com/Rkb1510/my-portfolio',
     },
+
+    {
+      title: 'Quantam Risk Simulator',
+      description: 'A lightweight React-based simulator to visualize the cryptographic risks identity systems may face.',
+      githubUrl: 'https://github.com/Rkb1510/Quantam-Risk-Simulator',
+    },
     
   ];
 
