@@ -2,20 +2,13 @@
 
 function Footer() {
   return (
-    <footer
-      style={{
-        padding: '1.5rem 2rem',
-        backgroundColor: '#161b22',
-        color: 'white',
-        textAlign: 'center',
-        marginTop: '3rem',
-        fontSize: '0.9rem',
-        userSelect: 'none',
-        cursor: 'default',
-      }}
-    >
-      <p style={{ transition: 'color 0.3s' }}>
-        &copy; {new Date().getFullYear()} Rushi. All rights reserved.
+    <footer className="py-6 px-4 bg-gradient-to-r from-black via-gray-900 to-black text-gray-300 text-center border-t border-gray-700">
+      <p className="text-sm hover:text-cyan-400 transition-colors duration-300">
+        &copy; {new Date().getFullYear()}{" "}
+        <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent font-semibold">
+          Rushi
+        </span>
+        . All rights reserved.
       </p>
     </footer>
   );
