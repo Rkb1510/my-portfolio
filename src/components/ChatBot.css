@@ -78,3 +78,7 @@
 .chatbot-questions button:hover {
   background: #e0e0e0;
 }
+
+.chatbot-messages {
+  scroll-behavior: smooth;
+}

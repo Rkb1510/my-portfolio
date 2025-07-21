@@ -1,8 +1,7 @@
 //components/ChatBox.jsx
 
-import React, {useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import "./ChatBot.css";
-import { text } from "framer-motion/client";
 
 const botData = [
     {question: "Who are you?", answer:"I'm Rushi Bhuva, an IT Professional with 4+ years of experience in IT Operations, automation, and risk analysis."},
@@ -14,24 +13,49 @@ const botData = [
 
 const ChatBot = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const[messages, setMessage] = useState([]);
+    const[messages, setMessages] = useState([]);
+    const messageEndRef = useRef(null);
+    const firstButtonRef = useRef(null);
 
     const handleUserInput = (question) => {
         const found = botData.find((q)=>q.question===question);
         const response = found ? found.answer:"Sorry, I don't have an answer for that.";
-        setMessages([...messages, {sender:"user", text: question},{sender:"bot",text: response}]);
+        setMessages((prev) => [
+            ...prev,
+            {sender:"user", text: question},
+            {sender:"bot", text: response},
+        ]);
     };
 
+//AutoScroll
+    useEffect(()=>{
+        if (messageEndRef.current) {
+            messageEndRef.current.scrollIntoView({behavior:"smooth"});
+        }
+    }, [messages]);
+
+//Focus on First Question
+    useEffect(()=>{
+        if (isOpen && firstButtonRef.current) {
+            firstButtonRef.current.focus();
+        }
+    }, [isOpen]);
+    
     return (
         <div className={`chatbot-container ${isOpen ? "open" : ""}`}>
-            <button className="chatbot-toggle" onClick={() => setIsOpen(!isOpen)}>
+            <button 
+                className="chatbot-toggle" 
+                onClick={() => setIsOpen(!isOpen)}
+                aria-expanded={isOpen}
+                aria-controls="chatbot-box"
+                >
                 Chat
             </button>
 
             {isOpen && (
                 <div className="chatbot-box">
                     <div className="chatbot-header">Ask Rushi Bot</div>
-                    <div className="CHATBOT-MESSAGES">
+                    <div className="chatbot-messages">
                         {messages.map((msg, index) => (
                             <div key={index} className={`message ${msg.sender}`}>
                                 {msg.text}
