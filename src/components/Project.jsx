@@ -28,7 +28,7 @@ function Project() {
   return (
     <section
       id="projects"
-      className="py-20 px-6 bg-gradient-to-b from-black via-gray-900 to-black text-gray-100 text-center scroll-mt-24"
+      className="py-20 px-6 bg-gradient-to-b from-black via-gray-800 to-black text-gray-100 text-center scroll-mt-24"
     >
       <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
         My Projects

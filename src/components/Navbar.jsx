@@ -9,7 +9,7 @@ function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-black via-gray-900 to-black shadow-md">
+    <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-black via-gray-800 to-black shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <h1 className="text-xl font-bold text-cyan-400 tracking-wider">

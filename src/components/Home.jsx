@@ -8,7 +8,7 @@ function Home() {
       id="home"
       /* scroll-mt helps anchors land below fixed navbar */
       className="scroll-mt-24 min-h-screen flex flex-col justify-center items-center text-center px-4
-                 bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100"
+                 bg-gradient-to-b from-black via-gray-800 to-black text-gray-100"
     >
       <h1
         className="text-5xl md:text-6xl font-extrabold tracking-tight
