@@ -26,13 +26,14 @@ function Home() {
       </p>
 
       <a
-        href="#projects"
+        href="/Rushi Bhuva.pdf"
+        download
         className="mt-8 inline-block px-6 py-3 rounded-lg font-semibold
                    bg-gradient-to-r from-cyan-500 to-blue-600
                    hover:from-cyan-400 hover:to-blue-500
                    transition shadow-lg shadow-cyan-500/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-white"
       >
-        View Projects
+        Download Resume
       </a>
     </section>
   );
