@@ -65,47 +65,6 @@ function Contact() {
           <FaEnvelope className="inline mr-2" />
           Send an Email
         </a>
-
-        {/* Contact Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4 text-left"
-          noValidate
-        >
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          rows="5"
-          className="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-400 resize-y focus:outline-none focus:ring-2 focus:ring-cyan-500"
-        />
-        <button
-          type="submit"
-          className="mt-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold rounded-md py-3 transition shadow-md shadow-cyan-500/30"
-        >
-          Send Message
-        </button>
-        </form>
       </div>     
     </motion.section>
   );

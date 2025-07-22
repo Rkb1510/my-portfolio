@@ -3,11 +3,11 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const botData = [
-  { question: "Who are you?", answer: "I'm Rushi Bhuva, an IT Professional with 4+ years of experience in IT Operations, automation, and risk analysis." },
-  { question: "What are your key skills?", answer: "C#, .NET Core, React, Python, ML, IAM, Automation, Postgres, Azure, and PowerShell scripting." },
-  { question: "What’s your latest project?", answer: "I’m building a Post-Quantum Secure Identity Chatbot — blending GenAI, encryption, and trust frameworks." },
-  { question: "Do you have experience in cybersecurity?", answer: "Yes! While not my title, I’ve worked in access governance, IAM (SailPoint, OUD), vulnerability monitoring, and data protection at TD Bank." },
-  { question: "Where can I see your projects?", answer: "Check the Projects section above or visit my GitHub at https://github.com/Rkb1510." },
+  { question: "Who am I?", answer: "I'm Rushi Bhuva, an IT Professional with 4+ years of experience in IT Operations, automation, and risk analysis." },
+  { question: "What are Rushi's skills?", answer: "C#, .NET Core, React, Python, ML, IAM, Automation, Postgres, Azure, and PowerShell scripting." },
+  { question: "What’s Rushi's latest project?", answer: "I’m building a Post-Quantum Secure Identity Chatbot — blending GenAI, encryption, and trust frameworks." },
+  { question: "Does Rushi have experience in cybersecurity?", answer: "Yes! While not my title, I’ve worked in access governance, IAM (SailPoint, OUD), vulnerability monitoring, and data protection at TD Bank." },
+  { question: "How can you get hold of Rushi?", answer: "You can send out an email to rbhuva1996@gmail.com or Give him a call/text over +1 (780) 952-9357"}
 ];
 
 const ChatBot = () => {
@@ -45,7 +45,7 @@ const ChatBot = () => {
         <div className="w-80 bg-gray-900 rounded-xl shadow-lg mt-2 overflow-hidden flex flex-col border border-gray-700">
           {/* Header */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white p-3 font-semibold text-center">
-            Ask Rushi Bot
+            I am SkyNet, Rushi's Assitant.
           </div>
 
           {/* Messages */}

@@ -7,11 +7,11 @@ function Home() {
     <section
       id="home"
       /* scroll-mt helps anchors land below fixed navbar */
-      className="scroll-mt-24 min-h-screen flex flex-col justify-center items-center text-center px-4
+      className="scroll-mt-24 min-h-[60vh] flex flex-col justify-center items-center text-center px-4
                  bg-gradient-to-b from-black via-gray-800 to-black text-gray-100"
     >
       <h1
-        className="text-5xl md:text-6xl font-extrabold tracking-tight
+        className="text-4xl md:text-5xl font-extrabold tracking-tight
                    bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent
                    drop-shadow-[0_0_8px_rgba(56,178,172,.35)]"
       >
