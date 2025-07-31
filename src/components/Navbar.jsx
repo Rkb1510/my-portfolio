@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Scrollspy from "react-scrollspy";
-import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaBars, FaTimes, FaPaintBrush,  FaTools} from "react-icons/fa";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,12 +13,12 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <h1 className="text-xl font-bold text-cyan-400 tracking-wider">
-          Rushi's Portfolio
+          Rushi's Hub
         </h1>
 
         {/* Desktop Links */}
         <Scrollspy
-          items={["home", "about", "projects", "contact"]}
+          items={["home", "about", "services", "drawings", "projects", "contact"]}
           currentClassName="text-cyan-400 border-b-2 border-cyan-400"
           offset={-100}
           className={`hidden md:flex gap-8 text-gray-300 font-medium`}
@@ -31,6 +31,16 @@ function Navbar() {
           <li>
             <a href="#about" className="hover:text-cyan-400 transition flex items-center gap-2">
               <FaUser /> About
+            </a>
+          </li>
+          <li>
+            <a href="#services" className="hover:text-cyan-400 transition flex items-center gap-2">
+              <FaTools /> Services
+            </a>
+          </li>
+          <li>
+            <a href="#drawings" className="hover:text-cyan-400 transition flex items-center gap-2">
+              <FaPaintBrush /> Drawings
             </a>
           </li>
           <li>
@@ -63,6 +73,12 @@ function Navbar() {
           </a>
           <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-cyan-400 flex items-center gap-2">
             <FaUser /> About
+          </a>
+          <a href="#services" onClick={() => setMenuOpen(false)} className="hover:text-cyan-400 flex items-center gap-2">
+            <FaUser /> Service
+          </a>
+          <a href="#drawings" onClick={() => setMenuOpen(false)} className="hover:text-cyan-400 flex items-center gap-2">
+            <FaUser /> Drawing
           </a>
           <a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-cyan-400 flex items-center gap-2">
             <FaProjectDiagram /> Projects

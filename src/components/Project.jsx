@@ -28,11 +28,13 @@ function Project() {
   return (
     <section
       id="projects"
-      className="py-20 px-6 bg-gradient-to-b from-black via-gray-800 to-black text-gray-100 text-center scroll-mt-24"
+      className="pt-12 pb-20 px-6 flex flex-col items-center text-center
+                 bg-gradient-to-b from-black via-gray-800 to-black text-gray-100"
     >
-      <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-extrabold mb-10 pb-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent
+                   drop-shadow-[0_0_8px_rgba(56,178,172,.35)]">
         My Projects
-      </h2>
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {projectList.map((project, index) => (
           <div

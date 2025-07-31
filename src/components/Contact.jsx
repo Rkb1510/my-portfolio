@@ -29,12 +29,14 @@ function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="py-20 px-6 bg-gradient-to-b from-black via-gray-800 to-black text-white text-center scroll-mt-24"
+      className="pt-12 pb-20 px-6 flex flex-col items-center text-center
+                 bg-gradient-to-b from-black via-gray-800 to-black text-gray-100"
     >
       <div className="max-w-3xl mx-auto bg-gradient-to-b from-black via-gray-800 to-black">
-        <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-extrabold mb-10 pb-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent
+                   drop-shadow-[0_0_8px_rgba(56,178,172,.35)]">
           Contact Me
-        </h2>
+        </h1>
 
         <p className="mb-8 text-gray-300">
           I’d love to hear from you — whether it’s a project idea, a job

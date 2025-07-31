@@ -7,6 +7,8 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import './index.css';
 import ChatBot from './components/ChatBot.jsx';
+import Service from './components/Services.jsx';
+import Drawings from './components/Drawings.jsx';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <Service />
+      <Drawings />
       <Project />
       <Contact />
       <Footer />

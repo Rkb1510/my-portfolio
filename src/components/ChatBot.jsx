@@ -45,7 +45,7 @@ const ChatBot = () => {
         <div className="w-80 bg-gray-900 rounded-xl shadow-lg mt-2 overflow-hidden flex flex-col border border-gray-700">
           {/* Header */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white p-3 font-semibold text-center">
-            I am SkyNet, Rushi's Assitant.
+            I am SkyNet, Rushi's Assistant.
           </div>
 
           {/* Messages */}
