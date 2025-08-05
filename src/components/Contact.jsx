@@ -1,26 +1,10 @@
 //components/Contact.jsx
 
 import React, { useState } from "react";
-import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkedAlt, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    alert("Message sent (simulated)");
-    setFormData({ name: "", email: "", message: "" });
-  };
 
   return (
     <motion.section
@@ -32,7 +16,7 @@ function Contact() {
       className="pt-12 pb-20 px-6 flex flex-col items-center text-center
                  bg-gradient-to-b from-black via-gray-800 to-black text-gray-100"
     >
-      <div className="max-w-3xl mx-auto bg-gradient-to-b from-black via-gray-800 to-black">
+      <div className="max-w-5xl px-6 bg-gradient-to-b from-black via-gray-800 to-black">
         <h1 className="text-4xl font-extrabold mb-10 pb-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent
                    drop-shadow-[0_0_8px_rgba(56,178,172,.35)]">
           Contact Me
@@ -48,6 +32,17 @@ function Contact() {
           <div className="flex items-center gap-2">
             <FaPhone className="text-white" />
             +1 (780) 952-9357
+          </div>
+          <div className="flex items-center gap-2">
+            <a
+              href="linkedin.com/in/rushibhuva"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-cyan-400 hover:text-blue-300 transition"
+            >
+              <FaLinkedin className="text-white" />
+              LinkedIn
+            </a>
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-white" />
