@@ -12,10 +12,10 @@ function Project() {
       githubUrl: "https://github.com/Rkb1510/Banking-App",
     },
     {
-      title: "Portfolio Website",
+      title: "Expense Tracker",
       description:
-        "A personal website built with React to showcase my projects and skills.",
-      githubUrl: "https://github.com/Rkb1510/my-portfolio",
+        "A full-stack expense tracker built with ASP.NET Core Web API**, React.js, and SQL Server. Track expenses, visualize them with interactive charts, and manage users efficiently.",
+      githubUrl: "https://github.com/Rkb1510/Expense-Tracker",
     },
     {
       title: "Quantum Risk Simulator",
